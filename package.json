@@ -1,0 +1,13 @@
+{
+  "name": "count-down-block-cgb-guten-block",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "cgb-scripts start",
+    "prod": "cgb-scripts build",
+    "eject": "cgb-scripts eject"
+  },
+  "dependencies": {
+    "cgb-scripts": "1.23.1"
+  }
+}
