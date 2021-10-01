@@ -1,2 +1,2 @@
-# wordpress-count-down-block
+# Wordpress - Count Down Block (In Progress)
 WordPress - Count Down Block
