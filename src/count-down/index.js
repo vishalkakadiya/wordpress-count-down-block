@@ -11,7 +11,16 @@ import './editor.scss';
 import { getCounterTime } from './get-counter-time.js';
 import { displayCounter } from './display-counter.js';
 
-registerBlockType( 'st-count-down/main', {
+const getDateTimeElement = ( dateTimeElements ) => {
+
+	return (
+		<div className="count-down__container">
+			{ displayCounter( dateTimeElements ) }
+		</div>
+	);
+};
+
+registerBlockType( 'cdb/count-down-block', {
 	title: 'WordPress Count Down',
 	icon: 'clock',
 	category: 'common',
@@ -62,9 +71,7 @@ registerBlockType( 'st-count-down/main', {
 
 				</InspectorControls>
 
-				<div className="count-down__container">
-					{ displayCounter( dateTimeElements ) }
-				</div>
+				{ getDateTimeElement( dateTimeElements ) }
 
 			</div>
 		);
@@ -74,10 +81,6 @@ registerBlockType( 'st-count-down/main', {
 
 		let dateTimeElements = getCounterTime( attributes.counterDate );
 
-		return (
-			<div className="count-down__container">
-				{ displayCounter( dateTimeElements ) }
-			</div>
-		);
+		return getDateTimeElement( dateTimeElements );
 	},
 });

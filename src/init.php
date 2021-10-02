@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @uses {wp-editor} for WP editor styles.
  * @since 1.0.0
  */
-function st_count_down_block_assets() { // phpcs:ignore
+function cdb_assets() { // phpcs:ignore
 
 	// Register block styles for both frontend + backend.
 	wp_register_style(
@@ -74,7 +74,7 @@ function st_count_down_block_assets() { // phpcs:ignore
 	 * @since 1.16.0
 	 */
 	register_block_type(
-		'cgb/count-down-block',
+		'cdb/count-down-block',
 		array(
 			// Enqueue count-down.js for frontend.
 			'script'        => 'count-down-block-fronend-js',
@@ -87,13 +87,13 @@ function st_count_down_block_assets() { // phpcs:ignore
 		)
 	);
 }
-add_action( 'init', 'st_count_down_block_assets' );
+add_action( 'init', 'cdb_assets' );
 
 /**
  * Allow styles to be loaded in the backend.
  */
-function st_count_down_block_setup() {
+function cdb_setup() {
 
 	add_theme_support( 'editor-styles' );
 }
-add_action( 'after_setup_theme', 'st_count_down_block_setup' );
+add_action( 'after_setup_theme', 'cdb_setup' );
