@@ -11,11 +11,11 @@ import './editor.scss';
 import { getCounterTime } from './get-counter-time.js';
 import { displayCounter } from './display-counter.js';
 
-const getDateTimeElement = ( dateTimeElements ) => {
+const getDateTimeElement = ( dateTimeElements, isEditor = false ) => {
 
 	return (
 		<div className="count-down__container">
-			{ displayCounter( dateTimeElements ) }
+			{ displayCounter( dateTimeElements, isEditor ) }
 		</div>
 	);
 };
@@ -71,7 +71,7 @@ registerBlockType( 'cdb/count-down-block', {
 
 				</InspectorControls>
 
-				{ getDateTimeElement( dateTimeElements ) }
+				{ getDateTimeElement( dateTimeElements, true ) }
 
 			</div>
 		);
