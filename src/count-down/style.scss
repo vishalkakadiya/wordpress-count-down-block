@@ -1,0 +1,71 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+$font__body: 'Lato', sans-serif;
+
+.count-down {
+	overflow: hidden;
+
+	&__container {
+		overflow: hidden;
+		margin: 10px auto;
+	}
+
+	&__element {
+		width: 25%;
+		float: left;
+		text-align: center;
+		position: relative;
+
+		&:not(:last-child)::after {
+			content: ':';
+			font-size: 64px;
+			position: absolute;
+			right: -10px;
+			top: 30%;
+			transform: translateY(-50%);
+			opacity: 0.4;
+
+			@media screen and (max-width: 768px) {
+				font-size: 38px;
+			}
+
+			@media screen and (min-width: 980px) {
+				font-size: 38px;
+			}
+		}
+	}
+
+	&__number {
+		display: block;
+		font-size: 64px;
+		line-height: 1;
+		font-weight: 700;
+		opacity: 0.4;
+		font-family: $font__body;
+
+		@media screen and (max-width: 768px) {
+			font-size: 38px;
+		}
+
+		@media screen and (min-width: 980px) {
+			font-size: 38px;
+		}
+
+	}
+
+	&__label {
+		display: block;
+		font-family: $font__body;
+		font-size: 14px;
+		line-height: calc(25/14);
+		opacity: 0.4;
+	}
+}
+
+.counter-date-time {
+	display: none;
+}
