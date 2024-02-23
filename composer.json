@@ -1,0 +1,12 @@
+{
+    "name": "vishalkakadiya/wordpress-count-down-block",
+    "description": "Count down block",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Vishal Kakadiya",
+            "email": "vishalkakadiya123@gmail.com"
+        }
+    ],
+    "require": {}
+}
